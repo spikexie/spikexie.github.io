@@ -144,29 +144,22 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/build.jpeg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >搭建博客的心得</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/weicheng.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >关于围城</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>想要搭建一个属于自己的博客已经好久啦。之前选择的是django博客框架，但是无奈之前时间不够加上我自己对于互联网，博客应用了解不深，最后不了了之。最近发现可以利用GitHub pages+ hexo。很简单就是很费时间。<br>我想对于我自己在搭建博客的一些过程和遇见的一些坑做一个总结有助于之后有这方面想法的朋友。在写这篇博客的时候，谢谢在简书上的一位朋友，在最后我会写出地址避免侵权。</p>
-<p>先说一下大概的流程吧</p>
+                <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在这里介绍一下我的背景，我是一名高中生今年6月份毕业。小的时候没看过很多的课外书，作为男孩子更多是局限于科普读物和一些故事情节很丰富的小说。对于这么文艺的一本书而且还是由钱钟书先生这样的大文豪写的，还是第一次阅读。</p>
+<h1 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h1><p>读完这本书，可能我和很多人有同一种感觉。看这本书的时候不是在看书中主角方渐鸿，其实你我都是他的现实投影。如果我站在钱钟书先生面前，会觉得如同空气一样透明。有一句话深入我心，是赵辛楣评论方渐鸿。</p>
 <ul>
-<li>拥有一个Github Pages</li>
-<li>在本地电脑里配置hexo的环境。（ hexo与github pages绑定，写博文修改博文等，生成静态博客并push to github。)</li>
-<li>绑定自己的域名（也可以不用绑定，github pages有二级域名，只不过绑定了一个属于自己的域名更有逼格点儿。）</li>
+<li><strong>“你不讨厌，但是你毫无用处 ”</strong></li>
 </ul>
-<h1 id="Github-Pages（第一步）"><a href="#Github-Pages（第一步）" class="headerlink" title="Github Pages（第一步）"></a>Github Pages（第一步）</h1><p>Github Pages免费的静态站点，其特点：免费托管、自带主题、支持自制页面等。</p>
-<p>创建Github Pages比较简单，只要你有一个github账号在创建一个仓库就行了，但是这个仓库是有规则的，其格式必须为：yourusername.github.io。然后根据提示一直下一步即可，非常简单。</p>
-<h1 id="hexo（第二部）"><a href="#hexo（第二部）" class="headerlink" title="hexo（第二部）"></a>hexo（第二部）</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<font colour="#8A2BE2"><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">中文版hexo简介</a></font><br>本来想写一写如何安装hexo的，但是觉得简书的朋友说的有道理，可能我现在写了如何安装hexo，可能两个月后来看这篇博客的朋友可能就觉得是被坑啦。所以我写出来<font colour="#8A2BE2"><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo的官网</a></font>（有的时候网上到处搜教程很容易看晕，而且随着时间变换信息技术更新，网上技术可能很不实用，有的没的上官网看看会学到很多）<br>- - -<br>## 建站<br>Hexo安装好了之后，就开始进行建站。打开终端cd到桌面并使用如下命令即可建好：<br>+ hexo init yourname<br>+ cd yourname<br>+ npm install<br><br>其中yourname是你的文件夹名字可随意取（本文章假设yourname的文件夹名称是Hexo）。<br>建站好了之后需要了解更多的信息和其他步骤请参考官网的这篇文档。<br><font colour="#8A2BE2"><a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/setup.html</a></font><br>- - -<br>这里需要特别提一下，官方的文档里并没讲解如何配置与Github pages进行关联，在此特意说一下配置信息。进入到你的站点（使用hexo init yourname命令时，这里的yourname文件夹目录，刚假设yourname是Hexo，所以我们进入Hexo目录），然后以文本编辑器打开_config.yml文件，并滚动到最下面添加如下配置信息（注意最下边有deploy和type字段，覆盖这两个字段或者删除这两个字段然后复制下面的四个字段也行。）：<br>+ deploy:<br>+ type: git<br>+ repo: <a href="https://github.com/spikexie/spikexie.github.io.git" target="_blank" rel="noopener">https://github.com/spikexie/spikexie.github.io.git</a><br>+ branch: master<br><br>把其中repo字段的值替换成你的github pages提交代码的git地址。<br>好吧，到此你使用终端，然后进入到你的站点文件夹使用hexo s命令，如果成功会打印类似Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop的一句话，再打开你的浏览器输入localhost:4000地址见证神奇的一刻吧。<br>- - -<br>## 发布<br>当然这只是本地跑起来了，而你的github pages服务器上并没有，所以你就需要在你的站点里使用终端命令进行发布：<br><br>+ hexo clean<br>+ hexo g<br>+ hexo d<br><br>命令详解，第一条是清楚缓存，第二条命令是生成本地发布文件夹，第三条命令才是最后的发布到github pages上。更多的hexo命令操作请参考官方文档即可。不过一般用来用去无非就是创建页面、发布这么几条命令而已。<font colour="#8A2BE2"><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">参考文档</a></font><br>- - -<br>## 主题<br>当你打开本地的博客时，心情开心又失落。开心是自己终于有自己的博客啦，失落是hexo的本来的模版一点也不好看。在这里我们可以在网上搜索很多hexo可以用的主题和插件之后会提及。<br>我自己使用的<font #8a2be2=""><a href="https://github.com/miccall/hexo-theme-Mic_Theme" target="_blank" rel="noopener">miccall</a></font>每个主题的原作者对于使用方式已经写的很详细啦，我就不重复啦。简书上的朋友是使用的&lt; font colour=#8A2BE2&gt;<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">Next</a>
-
-<h1 id="文章管理（第三步）"><a href="#文章管理（第三步）" class="headerlink" title="文章管理（第三步）"></a>文章管理（第三步）</h1><p>一般笔者写文章、修改文章是在本地可视化写文章，然后在使用命令提交上去。笔者使用的是一个hexo可视化文章管理的插件（hey），地址：<font colour="#8A2BE2"><a href="https://github.com/nihgwu/hexo-hey" target="_blank" rel="noopener">https://github.com/nihgwu/hexo-hey</a> </font>。</p>
-<p>当然也有一个Hexo的admin插件，但是那个插件不支持图片拖拽进来，所以笔者推荐使用hey。安装和使用详情，参见笔者给出的github地址。</p>
-<p>全文没有图片是因为笔者还没有掌握markdown使用图片的语句。</p>
-<hr>
-<p>感谢简书的朋友对与我在搭建博客和写博客的帮助！</p>
-<p>链接：<a href="https://www.jianshu.com/p/834d7cc0668d" target="_blank" rel="noopener">https://www.jianshu.com/p/834d7cc0668d</a></p>
+<p>方渐鸿不算乡下绅士，他爹是。方渐鸿留过洋但是骨子里还是有那种思维僵化，读古书的气质。方渐鸿说到底不是和苏小姐，唐小姐这样的名门之后，大家闺秀在同一个世界。方渐鸿认为自己留洋欧洲，买一张假文凭就出身社会上流。这是他一生都在寻找归属感和认同感。方渐鸿一辈子都是一个人，孤独的。从他留洋求学，谈恋爱时，他都是一个人，迷迷糊糊的活着，一直期望在掩盖自己黑历史买文凭的基础上去找和其他人的认同。最后，方渐鸿和孙柔嘉闹翻以后，又是一个人。每天我们忙到周身困乏，浑身疲软。生活，学业，事情走向和我们预期不一样，只能在和朋友同学闲聊闲谈的时候，卖弄自己偷闲得来的笑话，在朋友哪里索要安慰，缓一缓自己心中的压抑。</p>
+<p>为什么这本书要叫做围城。作者从方渐鸿的经历充分的展现。方渐鸿一辈子从留学归来到与孙柔嘉结合，一辈子平平庸庸，每天都想着掩盖自己讨好别人。很多时候太想走出自己的生活在外面找一块他自己的生活。杨绛先生说围城：“城里的人想冲出来，城外的人想进去。”很多东西羁绊我们的脚步，即使我们想冲出去，不再去管身边的一些事情，我们还是会想到我们身边的所有人，骂我们的，赞美我们的，关心我们的。“你只要一谈起，就会想念起每一个人来。”《麦田守望者》这样说，所以我们就怂了，继续开始我们周而复始的生活。</p>
+<ul>
+<li><strong> “你我都囿于在这围城中”</strong></li>
+</ul>
+<p>方渐鸿之所以会产生自己与名门之后，大家闺秀的好感，就是因为他留过洋，从而获得了一起留洋的大家闺秀的好感，于是他能够被提携到上海风流的文化社交圈子，和一众世界弟子谈笑风生。按理来说，这个世界本来就不属于他，本来就不该他进去。方鸿渐前半生的好运的前提就是他留过洋读了博士，而方鸿渐之所以能够留洋，本来不是他的家庭能够负担的起的，是他的未婚妻的父母因为伤心女儿早夭，所以把女儿的嫁妆给他供他留学。</p>
 
             </div>
 
@@ -229,8 +222,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/04/17/搭建博客心得/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/04/17/搭建博客心得/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/04/18/关于围城/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/04/18/关于围城/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
